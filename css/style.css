@@ -1,0 +1,45 @@
+/*레이아웃*/
+#header {
+    background: url(../img/header_bg.jpg) repeat-x center top;
+    height: 327px;
+}
+
+/*repeat-x : 작아져도 중앙배치*/
+
+/*컨테이너*/
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+    height: 327px;
+    position: relative;
+}
+
+/*반응형은 무조건 % 스크롤생기면안됨*/
+
+.header_menu {
+    text-align: right;
+    padding: 0 15px;
+}
+
+.header_menu>a {
+    color: white;
+    padding: 8px 0px 6px 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.header_menu>a:hover {
+    color: #cccccc;
+}
+
+/*미디어쿼리*/
+@media(max-width:1220px) {
+    .container {
+        width: 100%;
+    }
+
+    .header_menu {
+        padding: 0 15px;
+    }
+}
