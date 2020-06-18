@@ -50,31 +50,84 @@
     transition: box-shadow 0.25s ease-in-out;
 }
 
-.header_tit > h1:hover {
-    box-shadow: 
-    inset -9em 0 0 0 #257fac,
-    inset 9em 0 0 0 #257fac;
+.header_tit>h1:hover {
+    box-shadow:
+        inset -9em 0 0 0 #257fac,
+        inset 9em 0 0 0 #257fac;
     /*기본 폰트의 9배 사이즈에 맞춰져서 애니메이션이 입혀짐.*/
 }
 
-.header_tit > a {
+.header_tit>a {
     font-size: 16px;
     color: #ffffff;
     background: #4a9abf;
     display: inline-block;
     padding: 10px 20px;
     margin-top: -7px;
-    /* transition: ; */
 }
 
-.header_tit > a:hover {
-    box-shadow: 
-    inset 0 0 0 5px rgba(75, 154, 191, 0.9),
-    inset 0 0 0 100px rgba(0, 0, 0, 0.1);
-/*앞뒤 어디쓰든 상관없음.*/
+.header_tit>a:hover {
+    box-shadow:
+        inset 0 0 0 5px rgba(75, 154, 191, 0.9),
+        inset 0 0 0 100px rgba(0, 0, 0, 0.1);
+    /*앞뒤 어디쓰든 상관없음.*/
 }
 
+.header_icon {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 45px;
+}
 
+.header_icon li {
+    display: inline;
+    margin: 0 2px;
+}
+
+.header_icon li a{
+ background: #3192bf;
+ border-radius: 50%;
+ width: 60px;
+ height: 60px;
+ color: #ffffff;
+ display: inline-block;
+font-size: 35px;
+line-height: 60px;
+position: relative;
+}
+.header_icon li a span{
+    position: absolute;
+    left: 50%; top: -40px;
+    transform: translateX(-50%);
+    font-size: 12px;
+    line-height: 1.6;
+    background: #3192bf;
+    padding: 3px 9px;
+    border-radius: 6px 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.header_icon li a span::before{
+    content:'';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    margin-left: -5px;
+    /*삼각형 만들기*/
+    border-top: 5px solid #3192bf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.header_icon li a:hover span{
+opacity: 1;
+top: -34px;
+} 
+.header_icon li a:hover {
+    box-shadow:
+        inset 0 0 0 3px rgba(75, 154, 191, 0.9),
+        inset 0 0 0 100px rgba(0, 0, 0, 0.1);
+    /*앞뒤 어디쓰든 상관없음.*/
+}
 /*미디어쿼리*/
 @media(max-width:1220px) {
     .container {
