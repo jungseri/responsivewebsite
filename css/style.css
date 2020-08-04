@@ -437,8 +437,11 @@ body {
     -webkit-line-clamp: 2;
  /* 두줄효과 */
  padding-bottom: 5px;
-
+max-height: 40px;
+/*인터넷 익스플로어 호환성*/
 }
+
+/* 해상도에 따라서 이미지를 골라서 보여줄 수 있게 많이하고 있음. */
 .col1 {}
 
 .col2 {}
