@@ -350,7 +350,7 @@ body {
 }
 
 .column .col_tit {
-    font-style: 20px;
+    font-size: 20px;
     color: #2f7fa6;
     padding-bottom: 5px;
 }
@@ -362,10 +362,6 @@ body {
     color: #878787;
     line-height: 18px;
 }
-
-.menu {}
-
-.menu li {}
 
 .menu li a {
     font-size: 16px;
@@ -381,8 +377,8 @@ body {
         inset 180px 0 0 0 rgba(36, 130, 174, 0.7);
     color: #ffffff;
     background: rgba(36, 130, 174, 0.9);
-    transition: 
-    box-shadow 0.34s ease, background 0.34s ease;
+    transition:
+        box-shadow 0.34s ease, background 0.34s ease;
 }
 
 .menu li a i {
@@ -390,6 +386,59 @@ body {
     float: right;
 }
 
+/*공통요소*/
+.col2 h5 {
+    font-size: 14px;
+    color: #2f7fa6;
+    padding-bottom: 5px;
+}
+
+.col2 div li {
+    padding-left: 8px;
+    position: relative;
+}
+
+.col2 div li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #449ce2;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+/*more 버튼*/
+.col2 div{
+    position: relative;
+}
+.col2 div .more{
+    position: absolute;
+    right:0;
+    top: 3px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #878787;
+}
+
+/*게시판1*/
+.notice1 li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* 한줄효과 */
+}
+/*게시판2*/
+.notice2 li {   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+ /* 두줄효과 */
+ padding-bottom: 5px;
+
+}
 .col1 {}
 
 .col2 {}
@@ -435,7 +484,7 @@ body {
 /*미디어쿼리*/
 /*화면너비 0~1220px*/
 @media(max-width:1220px) {
-    
+
     .container {
         width: 100%;
     }
@@ -455,8 +504,10 @@ body {
 
 /*화면너비 0~1024px*/
 @media(max-width:1024px) {
-    
-    #header{background: 0 -20px;}
+
+    #header {
+        background: 0 -20px;
+    }
 }
 
 
@@ -546,6 +597,56 @@ body {
 
     .nav>div:last-child li {
         width: 50%;
+    }
+
+    .col1 .col_tit,
+    .col1 .col_desc {
+        display: none;
+    }
+
+    .col1 {
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .menu ul {
+        overflow: hidden;
+    }
+
+    .menu li a {
+        float: left;
+        width: 33.33333%;
+        text-align: center;
+        border-right: 1px solid #dbdbdb;
+        box-sizing: border-box;
+        /*border값을 박스 사이즈안에 포함시킬 수 있다.*/
+        color: white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .menu li a i {
+        display: none;
+    }
+
+    .menu li a:hover {
+        box-shadow: none;
+        background: rgba(36, 130, 174, 0.3);
+    }
+
+    .menu li:nth-child(3n) {
+        border-right: 0;
+    }
+
+    .col2 {
+        background: #ffffff;
+    }
+
+    .col3 {
+        background: #ffffff;
+    }
+
+    .col4 {
+        background: #ffffff;
     }
 }
 
