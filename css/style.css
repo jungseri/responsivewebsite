@@ -440,6 +440,19 @@ body {
 max-height: 40px;
 /*인터넷 익스플로어 호환성*/
 }
+/*블로그1*/
+.col3 img{
+    width: 100%;
+}
+.col3 .img_retina{
+display: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+    .col3 .img-retina {display: initial;}
+    .col3 .img-normal {display: none;}
+}
 
 /* 해상도에 따라서 이미지를 골라서 보여줄 수 있게 많이하고 있음. */
 .col1 {}
