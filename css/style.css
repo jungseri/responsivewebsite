@@ -497,6 +497,24 @@ only screen and (min-resolution: 3dppx) {
     .blog2 .img-retina {background-image: url(../img/blog4_@3.jpg);}
 }
 /* 해상도에 따라서 이미지를 골라서 보여줄 수 있게 많이하고 있음. */
+
+/*slick-slider*/
+
+.col4 .slider div figure img{
+    width: 100%;
+}
+
+
+.col4 .slick-dots button{
+    width: 10px;
+    height: 10px;
+    background: #51b0dc;
+    border-radius: 50%;
+    border: 0px;
+    float: left;
+    margin: 0 10px;
+}
+
 .col1 {}
 
 .col2 {}

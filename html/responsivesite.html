@@ -14,8 +14,7 @@
     <!-- style -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
     <!--fontawesome-->
     <!-- <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> -->
     <!--xe-icon-->
@@ -24,7 +23,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-
 
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
@@ -269,12 +267,6 @@
                             </div>
                             <p>반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다.</p>
                         </div>
-                        <div class="blog2 mt15">
-                            <div class="img_retina">
-                                <h5>image2</h5>
-                            </div>
-                            <p>반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다.반응형 웹 사이트 이미지 글입니다.</p>
-                        </div>
                     </article>
                     <!--col3-->
 
@@ -283,8 +275,28 @@
                 <section id="cont_center">
                     <h3 class="ir_su">반응형 사이트 가운데 컨텐츠</h3>
                     <article class="column col4">
-                        <h4 class="col_tit">Title</h4>
-                        <p class="col_desc">이 곳은 설명 부분입니다.</p>
+                        <h4 class="col_tit">Slick Slider</h4>
+                        <p class="col_desc">slick.js를 이용한 이미지 슬라이드 효과입니다.</p>
+                        <div class="slider">
+                            <div>
+                                <figure>
+                                <img src="../img/slider001.jpg" alt="">
+                                <figcaption><em>Responsive Site</em><span>슬라이드 플러그인을 활용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                <img src="../img/slider001.jpg" alt="">
+                                <figcaption><em>Responsive Site2</em><span>슬라이드 플러그인을 활용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                <img src="../img/slider001.jpg" alt="">
+                                <figcaption><em>Responsive Site3</em><span>슬라이드 플러그인을 활용한 반응형 이미지 슬라이드 입니다.</span></figcaption>
+                                </figure>
+                            </div>             
+                        </div>
                     </article>
                     <!--col4-->
 
@@ -357,6 +369,8 @@
     <!-- JavaScript Libraries -->
     <script src="../js/jquery.min_1.12.4.js"></script>
     <script src="../js/modernizr-custom.js"></script>
+    <script src="../js/slick.min.js"></script>
+
     <!--현재 브라우저에서 이 기능이 되는지 안되는지 체크하는 기능-->
     <script>
         //http://www.facebook.com/sharer.php?u={페이지 제목}&t={페이지링크}
@@ -374,6 +388,22 @@
             window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' + encodeURIComponent(
                     document.URL) + '%20-%20' + encodeURIComponent(document.title), 'twittersharedialog',
                 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        });
+
+        $('.slider').slick({
+            dots: true,
+            autoplay:true,
+            autoplaySpeed:3000,
+            arrows:false,
+            responsive:[
+                {
+                    breakpoint:768,
+                    settings:{
+                        arrows:true,
+                        dots:false
+                    }
+                }
+            ]
         });
     </script>
 </body>
